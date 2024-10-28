@@ -40,6 +40,9 @@ def calculator(num1, num2, operator):
     elif operator == "*":
         result = num1 * num2
     elif operator == "/":
+        if num2 == 0:
+            print("Division by zero error.")
+            return
         result = num1 / num2
     elif operator == "%":
         result = num1 % num2
@@ -51,7 +54,6 @@ def calculator(num1, num2, operator):
         result = num1 < num2
     elif operator == "<=":
         result = num1 <= num2
-
     else:
         print("Invalid operator.")
     # print(result)
