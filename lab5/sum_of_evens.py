@@ -22,9 +22,12 @@ def sum_of_evens(min_value, max_value):
 
     # Function implementation here ...
     total = 0
-    for i in range(min_value, max_value+1):
-        if i % 2 == 0:
-            total += i
+    # Ensuring that starting number is even
+    if min_value % 2 != 0:
+        min_value += 1
+
+    for i in range(min_value, max_value+1, 2):
+        total += i
     
     return total
 
